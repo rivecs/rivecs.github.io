@@ -7,7 +7,6 @@ I’m a self-taught developer with professional experience from 2002 to 2019, pr
 My strength isn’t flashy greenfield demos. It’s understanding existing systems, refactoring unclear logic, and improving predictability and maintainability over time.
 
 ## Featured Work
-
 ## Demo App Rehab
 
 ## React • JavaScript • State Management
@@ -27,7 +26,6 @@ A minimal backend demo showing service boundaries and data aggregation using a u
 ## Repository: https://github.com/rivecs
 
 ## Real-World Websites
-
 ## Production work under real constraints
 
 These projects represent real applications that evolved over time, balancing structure, usability, and long-term maintainability rather than idealized greenfield builds.
