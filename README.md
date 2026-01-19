@@ -46,5 +46,7 @@ I work well independently, communicate decisions clearly, and take ownership of 
 ## Contact
 
 Gmail: rivecs@gmail.com 
+
 GitHub: https://github.com/rivecs
+
 LinkedIn: https://www.linkedin.com/in/chris-rivers-43997b2
