@@ -7,32 +7,35 @@ I’m a self-taught developer with professional experience from 2002 to 2019, pr
 My strength isn’t flashy greenfield demos. It’s understanding existing systems, refactoring unclear logic, and improving predictability and maintainability over time.
 
 ## Featured Work
-## Demo App Rehab
 
-## React • JavaScript • State Management
+Demo App Rehab
+
+- React • JavaScript • State Management
 
 A small React application built to demonstrate how I approach inherited codebases. The focus is on refactoring unclear logic, making loading and UI state explicit, reducing duplication, and documenting technical decisions.
 
-## Repository: https://github.com/rivecs/demo-app-rehab
+Repository: https://github.com/rivecs/demo-app-rehab
 
-Live demo: https://demo-app-rehab.vercel.app
+- Live demo: https://demo-app-rehab.vercel.app
 
-## Microservices Demo
+Microservices Demo
 
-## Node.js • Express • API Gateway Pattern
+- Node.js • Express • API Gateway Pattern
 
 A minimal backend demo showing service boundaries and data aggregation using a user service, order service, and API gateway. Designed for local execution and clearly documented.
 
-## Repository: https://github.com/rivecs
+## Repository: 
+
+- https://github.com/rivecs
 
 ## Real-World Websites
-## Production work under real constraints
+Production work under real constraints
 
 These projects represent real applications that evolved over time, balancing structure, usability, and long-term maintainability rather than idealized greenfield builds.
 
-## Aerovisus Web: https://github.com/rivecs/aerovisus-web
+- Aerovisus Web: https://github.com/rivecs/aerovisus-web
 
-## JoinAHVA Web: https://github.com/rivecs/joinahva-web
+- JoinAHVA Web: https://github.com/rivecs/joinahva-web
 
 ## How I Work
 
