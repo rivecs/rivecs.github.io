@@ -1,39 +1,38 @@
 # Chris Rivers
 
-**Software Developer**  
-Systems • Refactoring • Maintainable Code
+**Senior Software Developer**  
+Modern Frontend • Systems Thinking • Maintainable Architecture
 
 ---
 
 ## Navigation
-> - [About](#about)
-- [Selected Work](#selected-work)
-- [How I Work](#how-i-work)
-- [Tools & Focus](#tools--focus)
+- [About](#about)
+- [Featured Work](#featured-work)
+- [How I Build Software](#how-i-build-software)
+- [Tech Stack](#tech-stack)
 - [Contact](#contact)
 
 ---
 
 ## About
 
-I’m a self-taught software developer with professional experience from **2002–2019**, progressing from junior roles into **Senior Developer** positions.
+I’m a self-taught software developer with professional experience from **2002–2019**, progressing from junior roles into **Senior Developer** positions. I’m now returning to hands-on development with modern tooling, current frontend patterns, and a strong focus on clarity and maintainability.
 
-I specialize in working with existing systems: understanding how they behave, refactoring unclear logic, and improving predictability and long-term maintainability. I value clear boundaries, explicit state, and documentation that explains *why* something exists, not just *what* it does.
-
-After stepping away from full-time software work for several years, I’m intentionally returning to hands-on development with refreshed focus and modern tooling.
+My strength is working in real systems. I’m comfortable stepping into existing codebases, untangling unclear logic, and refactoring toward predictable behavior. I care about explicit state, clear data flow, and designs that scale in understanding, not just features.
 
 ---
 
-## Selected Work
+## Featured Work
 
 ### Demo App Rehab  
-**React • JavaScript • State Management**
+**React • Modern JavaScript • Explicit State**
 
-A focused frontend refactor demonstrating how I approach inherited codebases.
+A focused React project designed to demonstrate how I approach inherited frontend code.
 
-- Makes loading and UI state explicit  
-- Reduces duplication and unclear control flow  
-- Documents technical decisions for maintainability  
+- Refactors duplicated data fetching and unclear logic
+- Makes loading and UI state explicit and observable
+- Improves readability and long-term maintainability
+- Documents architectural and refactor decisions
 
 Repository:  
 https://github.com/rivecs/demo-app-rehab  
@@ -46,13 +45,12 @@ https://demo-app-rehab.vercel.app
 ### Mini Microservices Demo  
 **Node.js • Express • API Gateway Pattern**
 
-A minimal backend demo illustrating service boundaries and data aggregation.
+A lightweight backend demo illustrating service boundaries and aggregation patterns.
 
-- User service  
-- Order service  
-- API gateway combining upstream responses  
-
-Designed for **local execution** and documented to explain architectural intent.
+- User service and order service running independently
+- API gateway combining upstream responses for frontend use
+- Explicit error handling and failure awareness
+- Designed for local execution and clarity over infrastructure noise
 
 Repository:  
 (link here)
@@ -60,7 +58,9 @@ Repository:
 ---
 
 ### Real-World Websites  
-**Production work under real constraints**
+**Production systems with real constraints**
+
+These projects reflect long-lived applications that evolved over time rather than greenfield demos.
 
 - **Aerovisus Web**  
   https://github.com/rivecs/aerovisus-web  
@@ -70,21 +70,22 @@ Repository:
 
 ---
 
-## How I Work
+## How I Build Software
 
-- Comfortable picking up unfamiliar codebases and making them easier to reason about  
-- Prefer incremental improvement over large rewrites  
-- Care about correctness, clarity, and predictable behavior  
-- Document decisions so future developers don’t have to guess  
+- I favor clear data flow and explicit state over implicit behavior  
+- I refactor incrementally instead of rewriting everything  
+- I optimize for readability, debuggability, and future change  
+- I document decisions so the *next* developer isn’t guessing  
 
 ---
 
-## Tools & Focus
+## Tech Stack
 
-- **Frontend:** JavaScript (ES6+), React, HTML/CSS  
-- **Engineering:** Debugging, refactoring, state management  
-- **Systems:** REST APIs, SQL, service integration  
-- **Workflow:** Git, CI/CD concepts, async collaboration  
+- **Frontend:** JavaScript (ES6+), React, HTML, CSS  
+- **Architecture:** State management, component boundaries, refactoring  
+- **Backend:** Node.js, REST APIs, service integration  
+- **Data:** SQL, relational modeling  
+- **Workflow:** Git, CI/CD concepts, async remote collaboration  
 
 ---
 
@@ -95,4 +96,4 @@ Repository:
 
 ---
 
-*This profile emphasizes real systems work, maintainability, and clarity over trend-driven presentation.*
+*This profile focuses on modern frontend development, systems thinking, and maintainable software design.*
