@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio · Software Engineer</title>
-  <meta name="description" content="Professional portfolio showcasing frontend architecture, UX decisions, and production-grade JavaScript systems." />
+  <meta name="description" content="Production-focused frontend portfolio showcasing real projects and engineering decisions." />
 
   <style>
+    /* =====================
+       Theme variables
+       ===================== */
     :root {
       --bg: #0c121b;
       --bg-soft: #121a26;
@@ -14,13 +17,19 @@
       --ink-2: #b8c4da;
       --line: rgba(255,255,255,.12);
       --primary: #60a5fa;
-      --accent: #ffd54a;
       --radius: 14px;
     }
 
-    * {
-      box-sizing: border-box;
+    [data-theme="light"] {
+      --bg: #f6f7fb;
+      --bg-soft: #ffffff;
+      --ink-1: #0b111b;
+      --ink-2: #4b5563;
+      --line: rgba(0,0,0,.12);
+      --primary: #2563eb;
     }
+
+    * { box-sizing: border-box; }
 
     html, body {
       margin: 0;
@@ -30,19 +39,17 @@
       line-height: 1.55;
     }
 
-    a {
-      color: var(--primary);
-      text-decoration: none;
-    }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
+    /* =====================
+       Layout
+       ===================== */
     header {
       padding: 72px 24px 56px;
       max-width: 1100px;
       margin: 0 auto;
+      position: relative;
     }
 
     header h1 {
@@ -55,6 +62,22 @@
       max-width: 720px;
       color: var(--ink-2);
       font-size: 1.1rem;
+    }
+
+    .top-controls {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+    }
+
+    .toggle {
+      background: var(--bg-soft);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: .85rem;
+      cursor: pointer;
+      color: var(--ink-1);
     }
 
     .cta {
@@ -74,22 +97,17 @@
       border: 1px solid var(--line);
       background: var(--bg-soft);
       color: var(--ink-1);
-      transition: transform .05s ease, filter .15s ease;
+      transition: transform .08s ease, filter .15s ease;
     }
 
     .btn.primary {
       background: var(--primary);
-      color: #0b111b;
+      color: #fff;
       border-color: transparent;
     }
 
-    .btn:hover {
-      filter: brightness(1.08);
-    }
-
-    .btn:active {
-      transform: translateY(1px);
-    }
+    .btn:hover { filter: brightness(1.05); }
+    .btn:active { transform: translateY(1px); }
 
     main {
       max-width: 1100px;
@@ -97,9 +115,7 @@
       padding: 0 24px 80px;
     }
 
-    section {
-      margin-top: 72px;
-    }
+    section { margin-top: 72px; }
 
     section h2 {
       font-size: 1.6rem;
@@ -107,6 +123,9 @@
       letter-spacing: -0.01em;
     }
 
+    /* =====================
+       Cards + motion
+       ===================== */
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -121,18 +140,18 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity .4s ease, transform .4s ease;
     }
 
-    .card h3 {
-      margin: 0;
-      font-size: 1.15rem;
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    .card p {
-      color: var(--ink-2);
-      margin: 0;
-      font-size: .95rem;
-    }
+    .card h3 { margin: 0; font-size: 1.15rem; }
+    .card p { color: var(--ink-2); margin: 0; font-size: .95rem; }
 
     .tags {
       display: flex;
@@ -163,103 +182,106 @@
       font-size: .85rem;
       text-align: center;
     }
-
-    @media (max-width: 640px) {
-      header {
-        padding-top: 56px;
-      }
-    }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Building software that survives real users</h1>
-    <p>
-      I design and build production-ready frontend systems with a strong emphasis on structure,
-      performance, and maintainability. This portfolio focuses on real projects, real tradeoffs,
-      and code that holds up after the demo ends.
-    </p>
+<header>
+  <div class="top-controls">
+    <button class="toggle" id="themeToggle">Toggle theme</button>
+  </div>
 
-    <div class="cta">
-      <a class="btn primary" href="https://github.com/" target="_blank" rel="noopener">View GitHub</a>
-      <a class="btn" href="#projects">Selected Projects</a>
-      <a class="btn" href="#about">How I Work</a>
+  <h1>Building software that survives real users</h1>
+  <p>
+    I focus on frontend systems that stay readable, fast, and maintainable
+    long after the first deploy.
+  </p>
+
+  <div class="cta">
+    <a class="btn primary" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="#projects">Projects</a>
+    <a class="btn" href="#about">How I work</a>
+  </div>
+</header>
+
+<main>
+
+  <section id="projects">
+    <h2>Pinned Projects</h2>
+    <div class="card-grid" id="repoGrid">
+      <!-- Cards injected here -->
     </div>
-  </header>
+  </section>
 
-  <main>
+  <section id="about">
+    <h2>How I Work</h2>
+    <p class="about">
+      I value clarity over cleverness and design systems assuming someone else
+      will have to understand them later. Possibly me. Possibly annoyed.
+    </p>
+  </section>
 
-    <section id="projects">
-      <h2>Selected Projects</h2>
+</main>
 
-      <div class="card-grid">
+<footer>
+  Plain HTML · Thoughtful JS · Hosted on GitHub Pages
+</footer>
 
-        <div class="card">
-          <h3>Membership Platform & Auth System</h3>
-          <p>
-            A production membership portal with client-side routing, partial injection,
-            role-based access control, and Supabase-backed authentication.
-          </p>
-          <div class="tags">
-            <span class="tag">JavaScript</span>
-            <span class="tag">Supabase</span>
-            <span class="tag">RBAC</span>
-            <span class="tag">Frontend Architecture</span>
-          </div>
+<script>
+/* =====================
+   Theme handling
+   ===================== */
+(function () {
+  const root = document.documentElement;
+  const stored = localStorage.getItem("theme");
+  if (stored) root.dataset.theme = stored;
+
+  document.getElementById("themeToggle").addEventListener("click", () => {
+    const next = root.dataset.theme === "dark" ? "light" : "dark";
+    root.dataset.theme = next;
+    localStorage.setItem("theme", next);
+  });
+})();
+
+/* =====================
+   Fetch pinned repos
+   ===================== */
+(async function () {
+  const username = "YOUR_GITHUB_USERNAME";
+  const grid = document.getElementById("repoGrid");
+
+  try {
+    const res = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
+    const repos = await res.json();
+
+    const pinned = repos
+      .filter(r => !r.fork)
+      .sort((a, b) => b.stargazers_count - a.stargazers_count)
+      .slice(0, 6);
+
+    pinned.forEach(repo => {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      card.innerHTML = `
+        <h3>${repo.name}</h3>
+        <p>${repo.description || "No description provided."}</p>
+        <div class="tags">
+          ${repo.language ? `<span class="tag">${repo.language}</span>` : ""}
+          <span class="tag">★ ${repo.stargazers_count}</span>
         </div>
+      `;
 
-        <div class="card">
-          <h3>Microservices Demo Platform</h3>
-          <p>
-            A minimal Node.js microservices architecture with an API gateway,
-            downstream timeouts, and hardened request handling.
-          </p>
-          <div class="tags">
-            <span class="tag">Node.js</span>
-            <span class="tag">Express</span>
-            <span class="tag">API Gateway</span>
-            <span class="tag">Services</span>
-          </div>
-        </div>
+      grid.appendChild(card);
+      requestAnimationFrame(() => card.classList.add("visible"));
+    });
 
-        <div class="card">
-          <h3>Mobile Incident Reporting App</h3>
-          <p>
-            A React Native / Expo application focused on reliability, offline safety,
-            and simplified UX under stress conditions.
-          </p>
-          <div class="tags">
-            <span class="tag">React Native</span>
-            <span class="tag">Expo</span>
-            <span class="tag">Android</span>
-            <span class="tag">UX</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="about">
-      <h2>How I Work</h2>
-      <p class="about">
-        I prioritize clarity over cleverness, structure over shortcuts, and systems that
-        remain understandable months later. I treat frontend architecture as engineering,
-        not decoration, and I assume every project will be maintained by someone else
-        eventually. Possibly me. Possibly angry.
-      </p>
-      <p class="about">
-        My work reflects production constraints: performance budgets, evolving requirements,
-        authentication edge cases, and users who do unexpected things at inconvenient times.
-      </p>
-    </section>
-
-  </main>
-
-  <footer>
-    Built with plain HTML, CSS, and restraint · Hosted on GitHub Pages
-  </footer>
+  } catch (err) {
+    grid.innerHTML = "<p>Unable to load repositories.</p>";
+  }
+})();
+</script>
 
 </body>
 </html>
