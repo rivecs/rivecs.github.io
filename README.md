@@ -1,50 +1,98 @@
-## Chris Rivers
+# Chris Rivers
 
-## Senior Developer focused on clarity, systems, and maintainable code.
+**Senior Software Developer**  
+Systems • Refactoring • Maintainable Code
 
-I’m a self-taught developer with professional experience from 2002 to 2019, progressing from junior roles into Senior Developer roles. After stepping away from full-time software work for several years, I’m intentionally returning to hands-on development with refreshed focus and modern tooling.
+---
 
-My strength isn’t flashy greenfield demos. It’s understanding existing systems, refactoring unclear logic, and improving predictability and maintainability over time.
+## Navigation
+- [About](#about)
+- [Selected Work](#selected-work)
+- [How I Work](#how-i-work)
+- [Tools & Focus](#tools--focus)
+- [Contact](#contact)
 
-## Featured Work
+---
 
-### Demo App Rehab
+## About
 
-#### React • JavaScript • State Management
+I’m a self-taught software developer with professional experience from **2002–2019**, progressing from junior roles into **Senior Developer** positions.
 
-A small React application built to demonstrate how I approach inherited codebases. The focus is on refactoring unclear logic, making loading and UI state explicit, reducing duplication, and documenting technical decisions.
+I specialize in working with existing systems: understanding how they behave, refactoring unclear logic, and improving predictability and long-term maintainability. I value clear boundaries, explicit state, and documentation that explains *why* something exists, not just *what* it does.
 
-#### Repository: https://github.com/rivecs/demo-app-rehab
+After stepping away from full-time software work for several years, I’m intentionally returning to hands-on development with refreshed focus and modern tooling.
 
-##### Live demo: https://demo-app-rehab.vercel.app
+---
 
-### Microservices Demo
+## Selected Work
 
-#### Node.js • Express • API Gateway Pattern
+### Demo App Rehab  
+**React • JavaScript • State Management**
 
-A minimal backend demo showing service boundaries and data aggregation using a user service, order service, and API gateway. Designed for local execution and clearly documented.
+A focused frontend refactor demonstrating how I approach inherited codebases.
 
-#### Repository: https://github.com/rivecs
+- Makes loading and UI state explicit  
+- Reduces duplication and unclear control flow  
+- Documents technical decisions for maintainability  
 
-## Real-World Websites
-###Production work under real constraints
+Repository:  
+https://github.com/rivecs/demo-app-rehab  
 
-These projects represent real applications that evolved over time, balancing structure, usability, and long-term maintainability rather than idealized greenfield builds.
+Live demo:  
+https://demo-app-rehab.vercel.app
 
-#### Aerovisus Web: https://github.com/rivecs/aerovisus-web
+---
 
-#### JoinAHVA Web: https://github.com/rivecs/joinahva-web
+### Mini Microservices Demo  
+**Node.js • Express • API Gateway Pattern**
+
+A minimal backend demo illustrating service boundaries and data aggregation.
+
+- User service  
+- Order service  
+- API gateway combining upstream responses  
+
+Designed for **local execution** and documented to explain architectural intent.
+
+Repository:  
+(link here)
+
+---
+
+### Real-World Websites  
+**Production work under real constraints**
+
+- **Aerovisus Web**  
+  https://github.com/rivecs/aerovisus-web  
+
+- **JoinAHVA Web**  
+  https://github.com/rivecs/joinahva-web  
+
+---
 
 ## How I Work
 
-I’m comfortable picking up existing systems, understanding how they behave, and improving them incrementally. I care about clarity, explicit state, and leaving things easier to reason about than I found them.
+- Comfortable picking up unfamiliar codebases and making them easier to reason about  
+- Prefer incremental improvement over large rewrites  
+- Care about correctness, clarity, and predictable behavior  
+- Document decisions so future developers don’t have to guess  
 
-I work well independently, communicate decisions clearly, and take ownership of system behavior rather than just shipping features.
+---
+
+## Tools & Focus
+
+- **Frontend:** JavaScript (ES6+), React, HTML/CSS  
+- **Engineering:** Debugging, refactoring, state management  
+- **Systems:** REST APIs, SQL, service integration  
+- **Workflow:** Git, CI/CD concepts, async collaboration  
+
+---
 
 ## Contact
 
-### Gmail: rivecs@gmail.com 
+- GitHub: https://github.com/rivecs  
+- LinkedIn: https://www.linkedin.com/in/chris-rivers-43997b2  
 
-### GitHub: https://github.com/rivecs
+---
 
-### LinkedIn: https://www.linkedin.com/in/chris-rivers-43997b2
+*This profile emphasizes real systems work, maintainability, and clarity over trend-driven presentation.*
