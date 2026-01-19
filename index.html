@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio · Software Engineer</title>
+  <meta name="description" content="Professional portfolio showcasing frontend architecture, UX decisions, and production-grade JavaScript systems." />
+
+  <style>
+    :root {
+      --bg: #0c121b;
+      --bg-soft: #121a26;
+      --ink-1: #e7eefc;
+      --ink-2: #b8c4da;
+      --line: rgba(255,255,255,.12);
+      --primary: #60a5fa;
+      --accent: #ffd54a;
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink-1);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.55;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      padding: 72px 24px 56px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+    }
+
+    header p {
+      max-width: 720px;
+      color: var(--ink-2);
+      font-size: 1.1rem;
+    }
+
+    .cta {
+      margin-top: 28px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 1px solid var(--line);
+      background: var(--bg-soft);
+      color: var(--ink-1);
+      transition: transform .05s ease, filter .15s ease;
+    }
+
+    .btn.primary {
+      background: var(--primary);
+      color: #0b111b;
+      border-color: transparent;
+    }
+
+    .btn:hover {
+      filter: brightness(1.08);
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    section {
+      margin-top: 72px;
+    }
+
+    section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+      letter-spacing: -0.01em;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--bg-soft);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 1.15rem;
+    }
+
+    .card p {
+      color: var(--ink-2);
+      margin: 0;
+      font-size: .95rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .tag {
+      font-size: .75rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: var(--ink-2);
+    }
+
+    .about {
+      max-width: 780px;
+      color: var(--ink-2);
+      font-size: 1.02rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 24px;
+      color: var(--ink-2);
+      font-size: .85rem;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      header {
+        padding-top: 56px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Building software that survives real users</h1>
+    <p>
+      I design and build production-ready frontend systems with a strong emphasis on structure,
+      performance, and maintainability. This portfolio focuses on real projects, real tradeoffs,
+      and code that holds up after the demo ends.
+    </p>
+
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/" target="_blank" rel="noopener">View GitHub</a>
+      <a class="btn" href="#projects">Selected Projects</a>
+      <a class="btn" href="#about">How I Work</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="projects">
+      <h2>Selected Projects</h2>
+
+      <div class="card-grid">
+
+        <div class="card">
+          <h3>Membership Platform & Auth System</h3>
+          <p>
+            A production membership portal with client-side routing, partial injection,
+            role-based access control, and Supabase-backed authentication.
+          </p>
+          <div class="tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">RBAC</span>
+            <span class="tag">Frontend Architecture</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Microservices Demo Platform</h3>
+          <p>
+            A minimal Node.js microservices architecture with an API gateway,
+            downstream timeouts, and hardened request handling.
+          </p>
+          <div class="tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">Express</span>
+            <span class="tag">API Gateway</span>
+            <span class="tag">Services</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Mobile Incident Reporting App</h3>
+          <p>
+            A React Native / Expo application focused on reliability, offline safety,
+            and simplified UX under stress conditions.
+          </p>
+          <div class="tags">
+            <span class="tag">React Native</span>
+            <span class="tag">Expo</span>
+            <span class="tag">Android</span>
+            <span class="tag">UX</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>How I Work</h2>
+      <p class="about">
+        I prioritize clarity over cleverness, structure over shortcuts, and systems that
+        remain understandable months later. I treat frontend architecture as engineering,
+        not decoration, and I assume every project will be maintained by someone else
+        eventually. Possibly me. Possibly angry.
+      </p>
+      <p class="about">
+        My work reflects production constraints: performance budgets, evolving requirements,
+        authentication edge cases, and users who do unexpected things at inconvenient times.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    Built with plain HTML, CSS, and restraint · Hosted on GitHub Pages
+  </footer>
+
+</body>
+</html>
