@@ -16,7 +16,7 @@ A small React application built to demonstrate how I approach inherited codebase
 
 Repository: https://github.com/rivecs/demo-app-rehab
 
-- Live demo: https://demo-app-rehab.vercel.app
+Live demo: https://demo-app-rehab.vercel.app
 
 Microservices Demo
 
