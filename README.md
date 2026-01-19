@@ -1,12 +1,12 @@
 # Chris Rivers
 
-**Senior Software Developer**  
+**Software Developer**  
 Systems • Refactoring • Maintainable Code
 
 ---
 
 ## Navigation
-- [About](#about)
+> - [About](#about)
 - [Selected Work](#selected-work)
 - [How I Work](#how-i-work)
 - [Tools & Focus](#tools--focus)
