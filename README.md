@@ -7,6 +7,7 @@ I’m a self-taught developer with professional experience from 2002 to 2019, pr
 My strength isn’t flashy greenfield demos. It’s understanding existing systems, refactoring unclear logic, and improving predictability and maintainability over time.
 
 ##Featured Work
+
 ##Demo App Rehab
 
 ##React • JavaScript • State Management
@@ -23,9 +24,9 @@ Live demo: https://demo-app-rehab.vercel.app
 
 A minimal backend demo showing service boundaries and data aggregation using a user service, order service, and API gateway. Designed for local execution and clearly documented.
 
-##Repository: (paste your repo link here)
+##Repository: https://github.com/rivecs
 
-###Real-World Websites
+##Real-World Websites
 
 ##Production work under real constraints
 
