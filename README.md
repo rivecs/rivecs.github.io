@@ -42,6 +42,7 @@ I’m comfortable picking up existing systems, understanding how they behave, an
 I work well independently, communicate decisions clearly, and take ownership of system behavior rather than just shipping features.
 
 ##Contact
+
 Gmail: rivecs@gmail.com 
 GitHub: https://github.com/rivecs
 LinkedIn: https://www.linkedin.com/in/chris-rivers-43997b2
