@@ -1,287 +1,283 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio · Software Engineer</title>
-  <meta name="description" content="Production-focused frontend portfolio showcasing real projects and engineering decisions." />
 
-  <style>
-    /* =====================
-       Theme variables
-       ===================== */
-    :root {
-      --bg: #0c121b;
-      --bg-soft: #121a26;
-      --ink-1: #e7eefc;
-      --ink-2: #b8c4da;
-      --line: rgba(255,255,255,.12);
-      --primary: #60a5fa;
-      --radius: 14px;
-    }
-
-    [data-theme="light"] {
-      --bg: #f6f7fb;
-      --bg-soft: #ffffff;
-      --ink-1: #0b111b;
-      --ink-2: #4b5563;
-      --line: rgba(0,0,0,.12);
-      --primary: #2563eb;
-    }
-
-    * { box-sizing: border-box; }
-
-    html, body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink-1);
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.55;
-    }
-
-    a { color: var(--primary); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* =====================
-       Layout
-       ===================== */
-    header {
-      padding: 72px 24px 56px;
-      max-width: 1100px;
-      margin: 0 auto;
-      position: relative;
-    }
-
-    header h1 {
-      font-size: clamp(2.2rem, 4vw, 3rem);
-      margin: 0 0 12px;
-      letter-spacing: -0.02em;
-    }
-
-    header p {
-      max-width: 720px;
-      color: var(--ink-2);
-      font-size: 1.1rem;
-    }
-
-    .top-controls {
-      position: absolute;
-      top: 24px;
-      right: 24px;
-    }
-
-    .toggle {
-      background: var(--bg-soft);
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 8px 12px;
-      font-size: .85rem;
-      cursor: pointer;
-      color: var(--ink-1);
-    }
-
-    .cta {
-      margin-top: 28px;
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 18px;
-      border-radius: 12px;
-      font-weight: 700;
-      border: 1px solid var(--line);
-      background: var(--bg-soft);
-      color: var(--ink-1);
-      transition: transform .08s ease, filter .15s ease;
-    }
-
-    .btn.primary {
-      background: var(--primary);
-      color: #fff;
-      border-color: transparent;
-    }
-
-    .btn:hover { filter: brightness(1.05); }
-    .btn:active { transform: translateY(1px); }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 24px 80px;
-    }
-
-    section { margin-top: 72px; }
-
-    section h2 {
-      font-size: 1.6rem;
-      margin-bottom: 18px;
-      letter-spacing: -0.01em;
-    }
-
-    /* =====================
-       Cards + motion
-       ===================== */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--bg-soft);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 22px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      opacity: 0;
-      transform: translateY(8px);
-      transition: opacity .4s ease, transform .4s ease;
-    }
-
-    .card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .card h3 { margin: 0; font-size: 1.15rem; }
-    .card p { color: var(--ink-2); margin: 0; font-size: .95rem; }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 8px;
-    }
-
-    .tag {
-      font-size: .75rem;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid var(--line);
-      color: var(--ink-2);
-    }
-
-    .about {
-      max-width: 780px;
-      color: var(--ink-2);
-      font-size: 1.02rem;
-    }
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 28px 24px;
-      color: var(--ink-2);
-      font-size: .85rem;
-      text-align: center;
-    }
-  </style>
-</head>
-
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <meta content="dark light" name="color-scheme"/>
+    
+    <title>Demo UI Portfolio</title>
+    
+    <link crossorigin="" href="https://api.github.com" rel="preconnect"/>
+    <link href="/assets/css/styles.css" rel="stylesheet">
+    
+    <meta content="Chris' Portfolio" property="og:title"/>
+    <meta content="Production-minded code, written to hold up under review." property="og:description"/>
+    </link>
+  </head>
 <body>
-
-<header>
-  <div class="top-controls">
-    <button class="toggle" id="themeToggle">Toggle theme</button>
-  </div>
-
-  <h1>Building software that survives real users</h1>
-  <p>
-    I focus on frontend systems that stay readable, fast, and maintainable
-    long after the first deploy.
-  </p>
-
-  <div class="cta">
-    <a class="btn primary" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
-    <a class="btn" href="#projects">Projects</a>
-    <a class="btn" href="#about">How I work</a>
-  </div>
-</header>
-
-<main>
-
-  <section id="projects">
-    <h2>Pinned Projects</h2>
-    <div class="card-grid" id="repoGrid">
-      <!-- Cards injected here -->
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <div class="brand">
+        <img src="assets/images/logo/chris-grey-1024.png" class="port-logo">
+        <div class="brand__text">
+          <div class="brand__name">Chris' Portfolio</div>
+          <div class="brand__tag">Readable systems. Predictable behavior.</div>
+      </div>
     </div>
-  </section>
+    <nav aria-label="Primary" class="nav">
+      <a href="#projects">Projects</a>
+      <a href="#tech">Tech</a>
+      <a href="#proof">Notes</a>
+      <a href="#contact">Contact</a>
+      <button aria-pressed="false" class="btn btn--ghost" id="themeToggle" type="button">
+        <span aria-hidden="true" class="btn__icon">◐</span>
+        <span class="btn__text">Theme</span>
+      </button>
+    </nav>
+    </div>
+  </header>
+  <main class="wrap" id="main">
 
-  <section id="about">
-    <h2>How I Work</h2>
-    <p class="about">
-      I value clarity over cleverness and design systems assuming someone else
-      will have to understand them later. Possibly me. Possibly annoyed.
-    </p>
-  </section>
-
-</main>
-
-<footer>
-  Plain HTML · Thoughtful JS · Hosted on GitHub Pages
-</footer>
-
-<script>
-/* =====================
-   Theme handling
-   ===================== */
-(function () {
-  const root = document.documentElement;
-  const stored = localStorage.getItem("theme");
-  if (stored) root.dataset.theme = stored;
-
-  document.getElementById("themeToggle").addEventListener("click", () => {
-    const next = root.dataset.theme === "dark" ? "light" : "dark";
-    root.dataset.theme = next;
-    localStorage.setItem("theme", next);
-  });
-})();
-
-/* =====================
-   Fetch pinned repos
-   ===================== */
-(async function () {
-  const username = "rivecs";
-  const grid = document.getElementById("repoGrid");
-
-  try {
-    const res = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
-    const repos = await res.json();
-
-    const pinned = repos
-      .filter(r => !r.fork)
-      .sort((a, b) => b.stargazers_count - a.stargazers_count)
-      .slice(0, 6);
-
-    pinned.forEach(repo => {
-      const card = document.createElement("div");
-      card.className = "card";
-
-      card.innerHTML = `
-        <h3>${repo.name}</h3>
-        <p>${repo.description || "No description provided."}</p>
-        <div class="tags">
-          ${repo.language ? `<span class="tag">${repo.language}</span>` : ""}
-          <span class="tag">★ ${repo.stargazers_count}</span>
+  <!-- HERO -->
+    <section aria-label="Intro" class="hero">
+      <div class="hero__left">
+        <h1 class="hero__title">
+          This is production-minded code.<br/>
+          <span class="muted">If something breaks, it’s fixable without rewriting everything.</span>
+        </h1>
+        <p class="hero__blurb">
+          This site exists to show how I think when building real systems:
+          minimal dependencies, predictable behavior, and decisions that hold up under review.
+          Nothing here is accidental.
+        </p>
+        <div class="hero__cta">
+          <a class="btn" href="#projects">View selected work</a>
+          <a class="btn btn--ghost" href="https://github.com/rivecs" rel="noreferrer" target="_blank">
+            GitHub
+          </a>
         </div>
-      `;
+        <div class="chips">
+          <span class="chip">Vanilla JS by choice</span>
+          <span class="chip">API-driven UI</span>
+          <span class="chip">Accessible by default</span>
+          <span class="chip">Dark-first</span>
+        </div>
+      </div>
+      <div aria-hidden="true" class="hero__right">
+        <div class="panel">
+          <div class="panel__header">
+            <div class="dots">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+            <div class="panel__title">runtime notes</div>
+            </div>
+            <div class="panel__body">
+              <div class="stat">
+                <div class="stat__label">Build approach</div>
+                <div class="stat__value">Ship → observe → correct</div>
+              </div>
+              <div class="stat">
+                <div class="stat__label">Motion</div>
+                <div class="stat__value">Used only when it clarifies</div>
+              </div>
+              <div class="stat">
+                <div class="stat__label">Repo source</div>
+                <div class="stat__value">Live GitHub API</div>
+              </div>
+              <div class="stat">
+                <div class="stat__label">Failure handling</div>
+                <div class="stat__value">Graceful, explained</div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      grid.appendChild(card);
-      requestAnimationFrame(() => card.classList.add("visible"));
-    });
+  <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="section__head">
+        <h2>Selected Projects</h2>
+        <p class="muted">
+          Data is pulled live from GitHub. If the API rate-limits or flakes out,
+          the UI degrades cleanly instead of falling over.
+        </p>
+      </div>
+      <div class="toolbar">
+        <input class="input" id="username" readonly="" type="text" value="rivecs"/>
+        <button class="btn" id="loadBtn" type="button">Load repos</button>
+        <button class="btn btn--ghost" id="cacheBtn" type="button">Use cache</button>
+        <div class="spacer"></div>
+        <select class="input" id="sort">
+          <option value="stars">Sort: stars</option>
+          <option value="updated">Sort: updated</option>
+          <option value="name">Sort: name</option>
+        </select>
+      </div>
+      <div aria-live="polite" class="status" id="status" role="status"></div>
+      <div class="grid" id="repoGrid"></div>
+    </section>
 
-  } catch (err) {
-    grid.innerHTML = "<p>Unable to load repositories.</p>";
-  }
-})();
-</script>
+    <!-- TECH -->
+    <section class="section" id="tech">
+      <div class="section__head">
+        <h2>Tools I Use Intentionally</h2>
+        <p class="muted">
+          This list reflects tools I’ve used long enough to know where they fail.
+        </p>
+      </div>
+      <div class="grid grid--2">
+        <article class="card">
+          <h3>Frontend</h3>
+          <ul class="list">
+            <li><strong>HTML/CSS</strong> with layout and accessibility treated as defaults</li>
+            <li><strong>JavaScript without ceremony</strong> focused on clarity and state</li>
+            <li><strong>Motion used sparingly</strong> and disabled when requested</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Backend &amp; APIs</h3>
+          <ul class="list">
+            <li><strong>REST patterns</strong> built for failure, not optimism</li>
+            <li><strong>Security basics</strong> applied consistently</li>
+            <li><strong>Logs that help</strong> when something breaks later</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Delivery</h3>
+          <ul class="list">
+            <li><strong>Simple deploy paths</strong> with minimal moving parts</li>
+            <li><strong>Deliberate structure</strong> so others can follow it</li>
+            <li><strong>Documentation</strong> written for engineers</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Quality Signals</h3>
+          <ul class="list">
+            <li><strong>Graceful failure</strong> instead of silent breakage</li>
+            <li><strong>Accessibility</strong> treated as a constraint</li>
+            <li><strong>Performance</strong> achieved by not shipping junk</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
+    <!-- NOTES -->
+    <section class="section" id="proof">
+      <div class="section__head">
+        <h2>Implementation Notes</h2>
+        <p class="muted">
+          This section exists because implementation details matter.
+        </p>
+      </div>
+      <div class="grid grid--3">
+        <article class="card">
+          <h3>Graceful Degradation</h3>
+          <p>
+            External dependencies fail. When they do, the UI continues to function
+            and explains what happened.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Explicit State</h3>
+          <p>
+            Application state is explicit. Sorting and rendering are deterministic
+            and easy to reason about.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Motion Discipline</h3>
+          <p>
+            Motion exists only where it improves comprehension.
+            Reduced-motion users are respected automatically.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE SNAPSHOT -->
+    <section class="section" id="architecture">
+      <div class="section__head">
+        <h2>Architecture Snapshot</h2>
+        <p class="muted">
+          Paste a project structure or high-level overview.
+          This analyzes how the system is shaped, not how pretty the code is.
+        </p>
+      </div>
+      <div class="card arch">
+      <form autocomplete="off" class="arch__form" id="archForm">
+        <div class="arch__row">
+          <label class="arch__label" for="archInput">Input</label>
+          <textarea class="input arch__input" id="archInput" placeholder="Paste a directory tree or brief architecture description here.
+          Focus on structure, boundaries, and responsibility split." rows="10" spellcheck="false"></textarea>
+        </div>
+        <div class="arch__actions">
+          <button class="btn" id="archBtn">Analyze Architecture</button>
+          <button class="btn btn--ghost" id="archClear" type="button">Clear</button>
+          <div aria-live="polite" class="arch__status muted" id="archStatus"></div>
+        </div>
+      </form>
+      <div class="arch__out" hidden="" id="archOut">
+          <div class="arch__grid">
+          <article class="card arch__card">
+            <h3>System Overview</h3>
+            <p class="arch__text" id="archSummary"></p>
+          </article>
+          <article class="card arch__card">
+            <h3>Detected Patterns</h3>
+            <ul class="arch__list" id="archPatterns"></ul>
+          </article>
+          <article class="card arch__card">
+            <h3>What’s Working</h3>
+            <ul class="arch__list" id="archStrengths"></ul>
+          </article>
+          <article class="card arch__card">
+            <h3>Primary Risk</h3>
+            <p class="arch__text" id="archRisk"></p>
+          </article>
+          <article class="card arch__card">
+            <h3>One Practical Improvement</h3>
+            <p class="arch__text" id="archImprove"></p>
+          </article>
+          </div>
+          <p class="muted arch__foot">
+            This is an automated architectural read.
+            It favors clarity and constraints over speculation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="section__head">
+        <h2>Contact</h2>
+      </div>
+      <div class="card contact">
+        <div>
+          <div class="contact__label">Email</div>
+            <a class="contact__value" href="mailto:rivecs@gmail.com">rivecs@gmail.com</a>
+          </div>
+        <div>
+        <div class="contact__label">GitHub</div>
+            <a class="contact__value" href="https://github.com/rivecs" target="_blank">github.com/rivecs</a>
+        </div>
+        <div>
+          <div class="contact__label">Work mode</div>
+          <div class="contact__value">Remote</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="muted">
+        Built to be readable, debuggable, and boring in the right ways.
+      </div>
+    </footer>
+
+  </main>
+  
+  <script defer="" src="/assets/js/app.js"></script>
 </body>
 </html>
