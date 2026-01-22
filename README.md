@@ -91,9 +91,7 @@ These projects reflect long-lived applications that evolved over time rather tha
 
 ## Contact
 
-- GitHub: https://github.com/rivecs  
-- LinkedIn: https://www.linkedin.com/in/chris-rivers-43997b2  
-
----
-
-*This profile focuses on modern frontend development, systems thinking, and maintainable software design.*
+- GitHub: 
+    https://github.com/rivecs  
+- LinkedIn: 
+    https://www.linkedin.com/in/chris-rivers-43997b2
