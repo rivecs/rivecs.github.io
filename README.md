@@ -26,7 +26,7 @@ I don’t really care about sounding impressive for its own sake. I care about w
 
 ## Featured Work
 
-### WebDiggity  
+### [WebDiggity.com  ](https://webdiggity.com)   
 **Platform Work • React • TypeScript • Vite • Next.js API Routes • Supabase**
 
 This is one of the bigger recent projects I’ve been building on. It covers AI assistants, SEO/AEO tooling, social media planning and publishing, QR workflows, image tooling, account handling, and business-specific admin behavior.
@@ -38,7 +38,7 @@ This is one of the bigger recent projects I’ve been building on. It covers AI 
 
 ---
 
-### - [WebDiggity API  ](https://webdiggity.com)
+### - [WebDiggity API  ](https://api.webdiggity.com)
 **Backend Logic • Auth • AI Workflows • Integrations**
 
 This is the backend side of that work. Assistant behavior, account flows, AI-assisted tooling, platform rules, and content handling all run through here.
@@ -50,7 +50,7 @@ This is the backend side of that work. Assistant behavior, account flows, AI-ass
 
 ---
 
-### Vaper Forge  
+### [VaperForge.com  ](https://vaperforge.com) 
 **Client Site • UX Direction • Assistant Integration**
 
 This is a real business site, not a sandbox. A lot of the work here was frontend direction, client-facing polish, assistant integration, account flow handling, and deployment cleanup.
@@ -62,7 +62,7 @@ This is a real business site, not a sandbox. A lot of the work here was frontend
 
 ---
 
-### My Pattern Pal  
+### [My Pattern Pro  ](https://mypatternpro.com) 
 **Product Work • Frontend UI**
 
 A user-facing product project where the work was mostly about making the interface and flow feel right, not just making the app technically exist.
@@ -73,7 +73,7 @@ A user-facing product project where the work was mostly about making the interfa
 
 ---
 
-### FitCity Leeds  
+### [Fit Citu Leeds  ](https://fitcity.webdiggity.com) 
 **Business Website • Frontend Delivery**
 
 A real business-facing site with normal real-world constraints.
@@ -84,7 +84,7 @@ A real business-facing site with normal real-world constraints.
 
 ---
 
-### Turning Point Tattoos  
+### [Turning Point Tattoos  ](https://tpt.webdiggity.com)   
 **Business Website • Frontend / Visual Direction**
 
 Another real-world site where the presentation mattered because the business depended on it.
@@ -95,6 +95,7 @@ Another real-world site where the presentation mattered because the business dep
 
 ---
 
+### [Cahaba Fire Co.  ](https://cahabaforeco.webdiggity.com) 
 ### Cahaba Fire Co.  
 **Business Web Work**
 
@@ -106,7 +107,7 @@ A live business-facing project that reflects the kind of independent delivery wo
 
 ---
 
-### Aerovisus  
+### [Aerovisus.com  ](https://aerovisus.com) 
 **Public Site • Intake / Routing • Brand Direction**
 
 This one changed direction over time. It’s now more of a public entry point and routing experience than the earlier media-focused version.
@@ -120,7 +121,7 @@ https://github.com/rivecs/aerovisus-web
 
 ---
 
-### JoinAHVA  
+### [Alabama Hemp &amp; Vape Association  ](https://joinahva.com) 
 **Production Site • Frontend Structure**
 
 A long-running site that had to keep evolving instead of living in perfect demo conditions.
