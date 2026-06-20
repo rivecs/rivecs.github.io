@@ -73,7 +73,7 @@ A user-facing product project where the work was mostly about making the interfa
 
 ---
 
-### [Fit Citu Leeds  ](https://fitcity.webdiggity.com) 
+### [Fit City Leeds  ](https://fitcity.webdiggity.com) 
 **Business Website • Frontend Delivery**
 
 A real business-facing site with normal real-world constraints.
