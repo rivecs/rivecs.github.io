@@ -38,7 +38,7 @@ This is one of the bigger recent projects I’ve been building on. It covers AI 
 
 ---
 
-### WebDiggity API  
+### - [WebDiggity API  ](https://webdiggity.com)
 **Backend Logic • Auth • AI Workflows • Integrations**
 
 This is the backend side of that work. Assistant behavior, account flows, AI-assisted tooling, platform rules, and content handling all run through here.
